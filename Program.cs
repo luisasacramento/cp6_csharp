@@ -14,13 +14,13 @@ builder.Services.AddSingleton<IProductService, ProductService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())    
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SimpleStoreApi v1"));
 }
 
-app.UseHttpsRedirection();
+app.UseHttpsRedirection();    
 app.UseAuthorization();
 app.MapControllers();
-app.Run();
+app.Run();    

@@ -8,12 +8,12 @@ public class ProductService : IProductService
 
     public ProductService()
     {
-        _products.AddRange(new[]
+        _products.AddRange(new[]    
         {
             new Product { Name = "Camiseta", Description = "Camiseta 100% algodão", Price = 49.90m, Stock = 10 },
             new Product { Name = "Caneca", Description = "Caneca cerâmica 350ml", Price = 29.50m, Stock = 20 },
         });
-    }
+    }    
 
     public IEnumerable<Product> GetAll() => _products;
     public Product? GetById(Guid id) => _products.FirstOrDefault(p => p.Id == id);

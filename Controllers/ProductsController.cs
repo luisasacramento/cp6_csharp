@@ -6,9 +6,10 @@ namespace SimpleStoreApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProductsController : ControllerBase
-{
-    private readonly IProductService _service;
+public class ProductsController : ControllerBase   
+{      
+    private readonly IProductService _service;    
+
 
     public ProductsController(IProductService service)
     {
@@ -16,8 +17,8 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Product>> GetAll() => Ok(_service.GetAll());
-
+    public ActionResult<IEnumerable<Product>> GetAll() => Ok(_service.GetAll());   
+ 
     [HttpGet("{id}")]
     public ActionResult<Product> GetById(Guid id)
     {
